@@ -2,6 +2,49 @@
 	font-family: 'Double Feature'; src: url('/fonts/DoubleFeature.ttf');
 }
 
-h1 {
+html,
+body {
 	font-family: 'Double Feature';
+}
+
+.body-container {
+	width: 100%;
+}
+
+.navbar-row {
+	height: 70px;
+}
+
+.landing-row {
+	height: 625px;
+	background-color: black;
+}
+
+.search-row {
+	height: 250px;
+	background-color: gray;
+}
+
+.how-row {
+	height: 500px;
+}
+
+.signup-row {
+	height: 100px;
+	background-color: black;
+}
+
+.media-row {
+	height: 500px;
+	background-color: gray;
+}
+
+.social-row {
+	height: 150px;
+}
+
+@media (min-width: 1250px) {
+	.body-container {
+		max-width: 1200px;
+	}
 }
