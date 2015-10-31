@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Double Feature'; src: url('/fonts/DoubleFeature.ttf');
+}
+
+h1 {
+	font-family: 'Double Feature';
+}
