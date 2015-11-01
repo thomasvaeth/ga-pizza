@@ -23,4 +23,8 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.listen(port);
+app.use('/signup', require('./controllers/signup'));
+
+app.listen(port , function() {
+	console.log('I just ate ' + port + ' slices of pizza.');
+});

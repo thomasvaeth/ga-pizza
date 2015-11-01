@@ -1,0 +1,13 @@
+<% titleVar = "| Sign Up" %>
+
+<h1>Sign Up</h1>
+
+<form action="/signup" method="POST" role="form">
+	<input type="text" class="form-control" name="firstName" placeholder="First Name" required>
+	<input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+	<input type="email" class="form-control" name="email" placeholder="Email Address" required>
+	<input type="password" class="form-control" name="password" placeholder="Password" minlength="8" maxlength="99" required>
+	<input type="password" class="form-control" name="passwordConfirm" placeholder="Confirm Password" minlength="8" maxlength="99" required>
+	
+	<button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
