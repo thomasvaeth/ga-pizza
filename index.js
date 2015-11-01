@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var session = require('express-session');
 var db = require("./models");
 var port = process.env.PORT || 3000;
 
@@ -11,6 +12,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/static'));
+
+app.use(session({
+	secret: process.env.SESSION_SECRET,
+	resave: false,
+	saveUninitialized: true
+}));
 
 var yelp = require('yelp').createClient({
   consumer_key: process.env.YELP_CONSUMER_KEY, 
@@ -24,6 +31,8 @@ app.get('/', function(req, res) {
 });
 
 app.use('/signup', require('./controllers/signup'));
+
+app.use('/login', require('./controllers/login'));
 
 app.listen(port , function() {
 	console.log('I just ate ' + port + ' slices of pizza.');
