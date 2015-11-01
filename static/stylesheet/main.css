@@ -2,17 +2,35 @@
 	font-family: 'Double Feature'; src: url('/fonts/DoubleFeature.ttf');
 }
 
-html,
-body {
-	font-family: 'Double Feature';
-}
-
 .body-container {
 	width: 100%;
 }
 
 .navbar-row {
 	height: 70px;
+}
+
+.logo {
+	height: 60px;
+	margin-top: 5px;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+	font-family: 'Double Feature';
+	cursor: pointer;
+	text-decoration: none;
+	color: #49433F;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .landing-row {
