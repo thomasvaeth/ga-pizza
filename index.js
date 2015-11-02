@@ -19,6 +19,23 @@ app.use(session({
 	saveUninitialized: true
 }));
 
+app.use(function(req, res, next) {
+	if (req.session.user) {
+		db.user.find({where: {id: req.session.user}}).then(function (user) {
+			req.currentUser = user;
+			next();
+		});
+	} else {
+		req.currentUser = false;
+		next();
+	}
+});
+
+app.use(function(req, res, next) {
+	res.locals.currentUser = req.currentUser;
+	next();
+})
+
 var yelp = require('yelp').createClient({
   consumer_key: process.env.YELP_CONSUMER_KEY, 
   consumer_secret: process.env.YELP_CONSUMER_SECRET,
@@ -30,9 +47,7 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.use('/signup', require('./controllers/signup'));
-
-app.use('/login', require('./controllers/login'));
+app.use('/', require('./controllers/auth'));
 
 app.listen(port , function() {
 	console.log('I just ate ' + port + ' slices of pizza.');
