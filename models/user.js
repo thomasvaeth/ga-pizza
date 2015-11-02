@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-
+        models.user.belongsToMany(models.pizza, {through: 'usersPizzas'})
       },
       authenticate: function(email, password, callback) {
         this.find({where: {email: email}}).then(function(user) {

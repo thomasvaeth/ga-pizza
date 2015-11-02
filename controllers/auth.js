@@ -21,19 +21,24 @@ router.post('/signup', function(req, res) {
 		}).spread(function(user, created) {
 			if (created) {
 				req.session.user = user.id;
+				req.flash('success', 'You are signed up and logged in.');
 				res.redirect('/');
 			} else {
+				req.flash('danger', 'A user previously signed up with that email address.');
 				res.redirect('/signup');
 			}
-		});
+		}).catch(function(err) {
+			req.flash('danger', 'Error!!!1');
+			res.redirect('/signup');
+		})
 	} else {
-		consol.log('Passwords do not match!~');
+		req.flash('danger', 'Passwords do not match!~');
 		res.redirect('/signup');
 	}
 });
 
 router.get('/signup', function(req, res) {
-	res.render('signup');
+	res.render('user/signup');
 });
 
 router.post('/login', function(req, res) {
@@ -48,29 +53,23 @@ router.post('/login', function(req, res) {
 					console.log(err);
 				}
 				if (result) {
-					req.session.user = {
-						id: user.id,
-						firstName: user.firstName,
-						lastName: user.lastName,
-						email: user.email
-					}
-					console.log('Logged in.');
 					req.session.user = user.id;
+					req.flash('success', 'Logged in.');
 					res.redirect('/');
 				} else {
-					console.log('Incorrect password.');
-					res.redirect('login');
+					req.flash('danger', 'Incorrect email or password.');
+					res.redirect('/login');
 				}
 			});
 		} else {
 			console.log('No email found.');
-			res.redirect('signup');
+			res.redirect('/signup');
 		}
 	});
 });
 
 router.get('/login', function(req, res) {
-	res.render('login');
+	res.render('user/login');
 });
 
 module.exports = router;

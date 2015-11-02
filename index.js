@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var session = require('express-session');
+var flash = require('connect-flash');
 var db = require("./models");
 var port = process.env.PORT || 3000;
 
@@ -19,6 +20,8 @@ app.use(session({
 	saveUninitialized: true
 }));
 
+app.use(flash());
+
 app.use(function(req, res, next) {
 	if (req.session.user) {
 		db.user.find({where: {id: req.session.user}}).then(function (user) {
@@ -33,8 +36,9 @@ app.use(function(req, res, next) {
 
 app.use(function(req, res, next) {
 	res.locals.currentUser = req.currentUser;
+	res.locals.alerts = req.flash();
 	next();
-})
+});
 
 var yelp = require('yelp').createClient({
   consumer_key: process.env.YELP_CONSUMER_KEY, 
@@ -48,6 +52,8 @@ app.get('/', function(req, res) {
 });
 
 app.use('/', require('./controllers/auth'));
+
+app.use('/profile', require('./controllers/profile'));
 
 app.listen(port , function() {
 	console.log('I just ate ' + port + ' slices of pizza.');
