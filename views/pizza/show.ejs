@@ -15,5 +15,8 @@
 	<input type="hidden" value="<%= data.rating %>" name="rating">
 	<input type="hidden" value="<%= data.location.coordinate.latitude %>" name="lat">
 	<input type="hidden" value="<%= data.location.coordinate.longitude %>" name="lng">
-	<button type="submit" class="btn btn-lg btn-primary">Add to Visited</button>
+
+	<% if (currentUser) { %>
+		<button type="submit" class="btn btn-lg btn-primary">Add to Visited</button>
+	<% } %>
 </form>
