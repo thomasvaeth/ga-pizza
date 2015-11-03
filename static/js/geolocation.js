@@ -1,3 +1,6 @@
+var latitude = null;
+var longitude = null;
+
 function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showPosition);
@@ -7,7 +10,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-	console.log("Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude); 
+	document.getElementsByTagName('input')[0].value = position.coords.latitude;
+	document.getElementsByTagName('input')[1].value = position.coords.longitude;
 }
 
 document.addEventListener('DOMContentLoaded', function() {

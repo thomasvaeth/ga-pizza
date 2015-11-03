@@ -40,18 +40,13 @@ app.use(function(req, res, next) {
 	next();
 });
 
-var yelp = require('yelp').createClient({
-  consumer_key: process.env.YELP_CONSUMER_KEY, 
-  consumer_secret: process.env.YELP_CONSUMER_SECRET,
-  token: process.env.YELP_TOKEN,
-  token_secret: process.env.YELP_TOKEN_SECRET
-});
-
 app.get('/', function(req, res) {
 	res.render('index');
 });
 
 app.use('/', require('./controllers/auth'));
+
+app.use('/search', require('./controllers/search'));
 
 app.use('/profile', require('./controllers/profile'));
 
