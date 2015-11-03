@@ -46,7 +46,8 @@ app.get('/', function(req, res) {
 
 app.use('/', require('./controllers/auth'));
 
-app.use('/search', require('./controllers/search'));
+app.use('/search', require('./controllers/pizza-search'));
+app.use('/search', require('./controllers/pizza-information'));
 
 app.use('/profile', require('./controllers/profile'));
 

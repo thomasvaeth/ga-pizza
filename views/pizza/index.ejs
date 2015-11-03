@@ -1,0 +1,11 @@
+<% titleVar = '| Search' %>
+
+<h1>Pizza Around You!</h1>
+
+<% for (var i = 0; i < 8; i++) { %>
+	<a href="/search/<%= data.businesses[i].id %>">
+		<div class="well">
+			<%= data.businesses[i].name %>
+		</div>
+	</a>
+<% } %>

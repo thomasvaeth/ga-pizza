@@ -1,0 +1,19 @@
+<% titleVar = '| Information' %>
+
+<h1>Pizza Place!</h1>
+
+<div class="well">
+	<h2><%= data.name %></h2>
+	<h3><%= data.location.city %></h3>
+	<h4><%= data.rating %></h4>
+</div>
+
+<form method="POST" action="/profile">
+	<input type="hidden" value="<%= data.name %>" name="name">
+	<input type="hidden" value="<%= data.id %>" name="yelpId">
+	<input type="hidden" value="<%= data.location.city %>" name="city">
+	<input type="hidden" value="<%= data.rating %>" name="rating">
+	<input type="hidden" value="<%= data.location.coordinate.latitude %>" name="lat">
+	<input type="hidden" value="<%= data.location.coordinate.longitude %>" name="lng">
+	<button type="submit" class="btn btn-lg btn-primary">Add to Visited</button>
+</form>
