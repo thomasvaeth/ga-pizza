@@ -10,7 +10,6 @@ function getLocation() {
 }
 
 function showPosition(position) {
-	console.log(position);
 	document.getElementsByTagName('input')[0].value = position.coords.latitude;
 	document.getElementsByTagName('input')[1].value = position.coords.longitude;
 }
