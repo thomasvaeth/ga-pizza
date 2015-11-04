@@ -2,6 +2,10 @@
 	font-family: 'Double Feature'; src: url('/fonts/DoubleFeature.ttf');
 }
 
+body {
+	background-color: #ECF0F1;
+}
+
 .body-container {
 	width: 100%;
 }
@@ -20,19 +24,25 @@ a:hover,
 a:active,
 a:visited {
 	font-family: 'Double Feature';
-	cursor: pointer;
 	text-decoration: none;
 	color: #49433F;
 }
 
 .landing-row {
 	height: 625px;
-	background-color: black;
+	background-color: #3498DB;
+}
+
+.landing-image {
+	position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
 }
 
 .search-row {
 	height: 250px;
-	background-color: gray;
+	background-color: #E74C3C;
 }
 
 .how-row {
@@ -41,16 +51,22 @@ a:visited {
 
 .signup-row {
 	height: 100px;
-	background-color: black;
+	background-color: #3498DB;
 }
 
 .media-row {
 	height: 500px;
-	background-color: gray;
+	background-color: black;
+}
+
+.music-video {
+	margin: 0 auto;
+  margin-top: 55px;
 }
 
 .social-row {
 	height: 150px;
+	background-color: #E74C3C;
 }
 
 #map {
