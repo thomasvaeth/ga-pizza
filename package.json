@@ -25,6 +25,7 @@
     "express-ejs-layouts": "^2.0.0",
     "express-session": "^1.12.1",
     "request": "^2.65.0",
+    "sequelize-cli": "^2.1.0",
     "yelp": "^0.2.0"
   }
 }
