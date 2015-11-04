@@ -6,6 +6,10 @@
 	max-width: 800px;
 }
 
+.alert {
+	margin: 0 auto;
+}
+
 a:link,
 a:hover,
 a:active,
