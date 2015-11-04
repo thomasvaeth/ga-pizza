@@ -1,11 +1,15 @@
 <% titleVar = '| Search' %>
 
-<h1>Pizza Around You!</h1>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<h1>Pizza Around You!</h1>
+</div>
 
 <% for (var i = 0; i < 8; i++) { %>
 	<a href="/search/<%= data.businesses[i].id %>">
-		<div class="well">
-			<%= data.businesses[i].name %>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<div class="well">
+				<%= data.businesses[i].name %>
+			</div>
 		</div>
 	</a>
 <% } %>

@@ -1,44 +1,80 @@
 <% titleVar = '| Home' %>
 
-<div class="row navbar-row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<img src="/images/pizza.png" class="logo">
-		<a href="/login">Log In</a>
-		<a href="/signup">Sign Up</a>
-	</div>
-</div>
-
 <div class="row landing-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<img src="/images/pizza-landing.png" class="landing-image">
 	</div>
 </div>
 
+<hr>
+
 <div class="row search-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<form action="/search" method="GET" role="search">
-			<input name="latitude">
-			<input name="longitude">
-			<button class="btn-large" role="button" type="submit">Use Current Location</button>
-		</form>
+		<p>
+			<form action="/search" method="GET" role="search">
+				<input class="form-control input-lg" type="text" placeholder="Enter Address" name="address" autocomplete="off" required>
+				<button class="btn btn-large btn-default" role="button" type="submit">Enter Address</button>
+			</form>
+		</p>
+		or
+		<p>
+			<form action="/search" method="GET" role="search">
+				<input name="latitude">
+				<input name="longitude">
+				<button class="btn btn-large btn-default" role="button" type="submit">Use Current Location</button>
+			</form>
+		</p>
 	</div>
 </div>
 
+<hr>
+
 <div class="row how-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h2>HOW IT WORKS</h2>
+	</div>
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<div class="thumbnail">
+			<div class="caption">
+				<h3>Thumbnail label</h3>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<div class="thumbnail">
+			<div class="caption">
+				<h3>Thumbnail label</h3>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<div class="thumbnail">
+			<div class="caption">
+				<h3>Thumbnail label</h3>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
+		</div>
 	</div>
 </div>
+
+<hr>
 
 <div class="row signup-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	</div>
 </div>
 
+<hr>
+
 <div class="row media-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<iframe width="640" height="390" src="https://www.youtube.com/embed/k6DA_WwO90c" frameborder="0" allowfullscreen class="music-video"></iframe>
 	</div>
 </div>
+
+<hr>
 
 <div class="row social-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

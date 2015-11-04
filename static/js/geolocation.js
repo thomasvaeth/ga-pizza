@@ -10,8 +10,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-	document.getElementsByTagName('input')[0].value = position.coords.latitude;
-	document.getElementsByTagName('input')[1].value = position.coords.longitude;
+	document.getElementsByTagName('input')[1].value = position.coords.latitude;
+	document.getElementsByTagName('input')[2].value = position.coords.longitude;
 }
 
 document.addEventListener('DOMContentLoaded', function() {

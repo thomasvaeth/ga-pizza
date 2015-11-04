@@ -18,15 +18,34 @@
 		<![endif]-->
 	</head>
 	<body>
-		
-		<div class="container">
-			<% include alerts %>
-		</div>
 
-		<div class="container body-container">
+		<div class="container">
+			<div class="header clearfix">
+				<nav>
+					<ul class="nav nav-pills pull-right">
+						<li><a href="/"><i class="fa fa-film"></i> Home</a></li>
+						<% if (!currentUser) { %>
+							<li><a href="/login">Log In</a></li>
+							<li><a href="/signup">Sign Up</a></li>
+						<% } else { %>
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="/logout">Logout</a></li>
+						<% } %>
+					</ul>
+				</nav>
+				<a href="/"><h3 class="text-muted">You Are Pizza</h3></a>
+			</div>
+
+			<hr>
+
+			<div class="container">
+				<% include alerts %>
+			</div>
 			<%- body %>
+
+			<hr>
+
 		</div>
-		
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->

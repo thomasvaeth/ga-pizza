@@ -72,4 +72,10 @@ router.get('/login', function(req, res) {
 	res.render('user/login');
 });
 
+router.get('/logout', function(req, res) {
+	req.session.user = false;
+  req.flash('info','You logged out.');
+  res.redirect('/');
+});
+
 module.exports = router;
