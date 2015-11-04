@@ -13,16 +13,23 @@ router.post('/', function(req, res) {
 	var rating = req.body.rating;
 	var lat = req.body.lat;
 	var lng = req.body.lng;
-	db.pizza.find({where: {name: name}}).then(function(createDelete) {
-		if (createDelete !== null) {
-			createDelete.destroy().then(function() {
+	db.user.findById(req.session.user).then(function(user) {
+		db.pizza.findOrCreate({
+			where: {
+				name: name
+			},
+			defaults: {
+				yelpId: yelpId, 
+				city: city, 
+				rating: rating, 
+				latitude: lat, 
+				longitude: lng
+			}
+		}).spread(function(pizza, created) {
+			user.addPizza(pizza).then(function() {
 				res.redirect('/profile');
 			});
-		} else {
-			db.pizza.create({name: name, yelpId: yelpId, city: city, rating: rating, latitude: lat, longitude: lng}).then(function(pizza) {
-				res.redirect('/profile');
-			});
-		}
+		});
 	});
 });
 
