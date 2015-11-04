@@ -1,3 +1,13 @@
 <% titleVar = "| Profile" %>
 
-<h1><%= currentUser.firstName + ' ' + currentUser.lastName %>'s Profile</h1>
+<h1><%= user.firstName + ' ' + user.lastName %>'s Profile</h1>
+
+<% pizzas.forEach(function(pizza) { %>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<a href="/search/<%= pizza.yelpId %>">
+			<div class="well">
+				<%= pizza.name %>
+			</div>
+		</a>
+	</div>
+<% }) %>

@@ -35,7 +35,11 @@ router.post('/', function(req, res) {
 
 router.get('/', function(req, res) {
 	if (req.currentUser) {
-		res.render('user/profile');
+		db.user.findById(req.session.user).then(function(user) {
+			user.getPizzas().then(function(pizzas) {
+				res.render('user/profile', {user: user, pizzas: pizzas});
+			});
+		});
 	} else {
 		res.redirect('/');
 	}
