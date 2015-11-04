@@ -16,10 +16,10 @@ router.post('/', function(req, res) {
 	db.user.findById(req.session.user).then(function(user) {
 		db.pizza.findOrCreate({
 			where: {
-				name: name
+				yelpId: yelpId
 			},
 			defaults: {
-				yelpId: yelpId, 
+				name: name, 
 				city: city, 
 				rating: rating, 
 				latitude: lat, 
