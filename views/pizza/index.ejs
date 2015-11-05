@@ -13,6 +13,7 @@
 				<% number = Math.floor(Math.random() * 8); %>
 				<img class="pizza" src="/images/<%= pizzaArr[number] %>" title="<%= data.businesses[i].name %>"><br>
 			</a>
+			<p class="pizza-name"><%= data.businesses[i].name %></p>
 		</div>
 	<% } %>
 </div>
