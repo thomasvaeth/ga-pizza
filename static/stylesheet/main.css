@@ -1,15 +1,52 @@
 @font-face {
 	font-family: 'Double Feature'; src: url('/fonts/DoubleFeature.ttf');
 }
+@import url(https://fonts.googleapis.com/css?family=Raleway:100);
 
 html,
 body {
+	font-family: 'Raleway', sans-serif;
 	background-color: #ECF0F1;
-	color: white;
+	color: #FFFFFF;
+}
+
+h1, h2, h3 {
+	font-weight: 100;
 }
 
 hr {
-	border-color: white;
+	border-color: #FFFFFF;
+}
+
+li {
+	margin-top: 10px;
+}
+
+li a:link,
+li a:hover,
+li a:active,
+li a:visited {
+	font-family: 'Double Feature';
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: #000000;
+	background-color: #ECF0F1;
+	border: none;
+}
+
+input, .btn {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+}
+
+p {
+	font-weight: 100;
+	font-size: 16px;
+}
+
+.btn-lg {
+	border-radius: 0;
 }
 
 .container {
@@ -17,17 +54,8 @@ hr {
 	width: 100%;
 }
 
-a:link,
-a:hover,
-a:active,
-a:visited {
-	/*font-family: 'Double Feature';*/
-	text-decoration: none;
-	color: #49433F;
-}
-
 .landing-row {
-	height: 625px;
+	height: 600px;
 	background-color: #3498DB;
 }
 
@@ -39,37 +67,69 @@ a:visited {
 }
 
 .search-row {
-	height: 250px;
+	height: 225px;
 	background-color: #E74C3C;
 	text-align: center;
 }
 
+.form-inline {
+	margin-top: 15px;
+}
+
+.form-inline input {
+	margin-top: 6px;
+	margin-bottom: 5px;
+}
+
+.search-row .btn-default {
+	background-color: #3498DB;
+	border: none;
+	color: #FFFFFF;
+}
+
+.search-row .btn-default:hover,
+.search-row .btn-default:active {
+	background-color: #2980B9;
+}
+
 .how-row {
 	height: 500px;
+	color: #000000;
+	text-align: center;
+}
+
+.how-row h3 {
+	margin: 30px 0 20px 0;
 }
 
 .signup-row {
-	height: 100px;
+	height: 125px;
 	background-color: #3498DB;
+	text-align: center;
 }
 
-.youtube-row {
-	height: 500px;
-	background-color: black;
+.signup-row .btn-default {
+	background-color: #FFFFFF;
+	border: none;
 }
 
-.music-video {
-	margin: 0 auto;
-  margin-top: 55px;
+.signup-row .btn-default:hover,
+.signup-row .btn-default:active {
+	background-color: #ECF0F1;
 }
 
 .instagram-row {
-	height: 600px;
+	height: 715px;
 	background-color: #E74C3C;
+	text-align: center;
+}
+
+.instagram-row h3 {
+	margin: 30px 0 20px 0;
 }
 
 #instafeed {
-	padding-top: 35px;
+	padding-top: 5px;
 }
 
 #instafeed a img {
@@ -77,8 +137,14 @@ a:visited {
 	margin-bottom: 4px;
 }
 
-.social-row {
-	height: 150px;
+.youtube-row {
+	height: 530px;
+	background-color: #000000;
+	text-align: center;
+}
+
+.youtube-row h3 {
+	margin: 30px 0 20px 0;
 }
 
 #map {

@@ -5,7 +5,7 @@ var feed = new Instafeed({
 	get: 'user',
 	userId: '2030844508',
 	clientId: '08d24c1320834541b6fab2a01e3cc61e',
-	limit: '15',
+	limit: '20',
 	sortBy: 'random'
 });
 feed.run();

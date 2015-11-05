@@ -3,8 +3,14 @@
 <h1>Sign Up</h1>
 
 <form action="/signup" method="POST" role="form">
-	<input type="text" class="form-control" name="firstName" placeholder="First Name" required>
-	<input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+	<div class="row">
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<input type="text" class="form-control" name="firstName" placeholder="First Name" required>
+		</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+		</div>
+	</div>
 	<input type="email" class="form-control" name="email" placeholder="Email Address" required>
 	<input type="password" class="form-control" name="password" placeholder="Password" minlength="8" maxlength="99" required>
 	<input type="password" class="form-control" name="passwordConfirm" placeholder="Confirm Password" minlength="8" maxlength="99" required>
