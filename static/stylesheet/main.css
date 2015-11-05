@@ -10,7 +10,7 @@ body {
 	color: #FFFFFF;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
 }
@@ -108,7 +108,7 @@ p {
 
 .how-row {
 	height: 500px;
-	color: #000000;
+	color: #4D4D4D;
 	text-align: center;
 }
 
@@ -176,7 +176,7 @@ p {
 }
 
 .modal-header {
-	color: #000000;
+	color: #4D4D4D;
 	border: none;
 }
 
@@ -186,7 +186,7 @@ p {
 }
 
 label {
-	color: #000000;
+	color: #4D4D4D;
 	font-weight: 100;
 }
 
@@ -201,12 +201,6 @@ label {
 .modal-footer {
 	border: none;
 }
-
-#map {
-	width: 500px;
-	height: 500px;
-}
-
 
 /* Pizza index */
 .index-row {
@@ -226,4 +220,54 @@ label {
 
 .pizza-name {
 	margin-top: 5px;
+}
+
+/* Pizza show */
+.show-row {
+	height: 600px;
+	background-color: #3498DB;
+	text-align: center;
+}
+
+.show-row h3 {
+	margin: 30px 0 20px 0;
+}
+
+#pizzeria {
+	margin-top: 10px;
+}
+
+.show-row-header {
+	text-transform: uppercase;
+}
+
+blockquote {
+	border-left: 3px solid #ECF0F1;
+	background-color: #FFFFFF;
+}
+
+.review {
+	color: #4D4D4D;
+}
+
+.review-link {
+	color: #3498D8;
+}
+
+a:hover,
+a:active {
+	color: #2980B9;
+}
+
+i {
+	color: #4D4D4D;
+}
+
+.visited {
+	margin-bottom: 10px;
+}
+
+#map {
+   width: 100%;
+   height: 500px;
 }
