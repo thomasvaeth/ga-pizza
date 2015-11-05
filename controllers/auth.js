@@ -22,18 +22,18 @@ router.post('/signup', function(req, res) {
 			if (created) {
 				req.session.user = user.id;
 				req.flash('success', 'You are signed up and logged in.');
-				res.redirect('/');
+				res.redirect(req.get('referer'));
 			} else {
 				req.flash('danger', 'A user previously signed up with that email address.');
-				res.redirect('/');
+				res.redirect(req.get('referer'));
 			}
 		}).catch(function(err) {
 			req.flash('danger', 'Error!!!1');
-			res.redirect('/');
+			res.redirect(req.get('referer'));
 		})
 	} else {
 		req.flash('danger', 'Passwords do not match!~');
-		res.redirect('/');
+		res.redirect(req.get('referer'));
 	}
 });
 
@@ -54,12 +54,12 @@ router.post('/signin', function(req, res) {
 					res.redirect(req.get('referer'));
 				} else {
 					req.flash('danger', 'Incorrect email or password.');
-					res.redirect('/');
+					res.redirect(req.get('referer'));
 				}
 			});
 		} else {
 			console.log('No email found.');
-			res.redirect('/');
+			res.redirect(req.get('referer'));
 		}
 	});
 });

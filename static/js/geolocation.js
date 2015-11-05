@@ -16,4 +16,7 @@ function showPosition(position) {
 
 document.addEventListener('DOMContentLoaded', function() {
 	getLocation();
+	if (document.getElementsByTagName('input')[1].value = null && document.getElementsByTagName('input')[1].value = null) {
+		document.getElementsByClassName('geolocation')[0].setAttribute('disabled', 'disabled');
+	}
 });
