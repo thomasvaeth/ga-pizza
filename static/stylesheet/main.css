@@ -175,3 +175,31 @@ p {
 .pizza {
 	height: 100px;
 }
+
+.modal-header {
+	color: #000000;
+	border: none;
+}
+
+.modal hr {
+	width: 95%;
+	border-color: #ECF0F1;
+}
+
+label {
+	color: #000000;
+	font-weight: 100;
+}
+
+#first-modal {
+	padding-right: 0;
+}
+
+#last-modal {
+	padding-left: 0;
+}
+
+.modal-footer {
+	border: none;
+}
+

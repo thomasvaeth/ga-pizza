@@ -25,20 +25,16 @@ router.post('/signup', function(req, res) {
 				res.redirect('/');
 			} else {
 				req.flash('danger', 'A user previously signed up with that email address.');
-				res.redirect('/signup');
+				res.redirect('/');
 			}
 		}).catch(function(err) {
 			req.flash('danger', 'Error!!!1');
-			res.redirect('/signup');
+			res.redirect('/');
 		})
 	} else {
 		req.flash('danger', 'Passwords do not match!~');
-		res.redirect('/signup');
+		res.redirect('/');
 	}
-});
-
-router.get('/signup', function(req, res) {
-	res.render('user/signup');
 });
 
 router.post('/login', function(req, res) {
