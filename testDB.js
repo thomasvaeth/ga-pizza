@@ -45,3 +45,7 @@
 // 		});
 // 	});
 // });
+
+db.pizza.findById(14).then(function(pizza) {
+	console.log(pizza.removeUser(1));
+});

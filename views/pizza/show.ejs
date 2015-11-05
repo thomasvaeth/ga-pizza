@@ -25,8 +25,10 @@
 			<input type="hidden" value="<%= data.location.coordinate.latitude %>" name="lat">
 			<input type="hidden" value="<%= data.location.coordinate.longitude %>" name="lng">
 
-			<% if (currentUser) { %>
+			<% if (currentUser && !visited) { %>
 				<button type="submit" class="btn btn-lg btn-default visited">ADD TO VISITED</button>
+			<% } else if (currentUser && visited) { %>
+				<button type="submit" class="btn btn-lg btn-default deleted">I DIDN'T GO</button>
 			<% } %>
 		</form>
 

@@ -15,9 +15,19 @@ var yelp = require('yelp').createClient({
 
 router.get('/:idx', function(req, res) {
 	var idx = req.params.idx;
-	yelp.business(idx, function(error, data) {
-	  res.render('pizza/show', {data: data});
-	});
+	db.user.find({
+		where: {
+			id: req.currentUser.id,
+		},
+		include: [{
+			model: db.pizza,
+			where: {yelpId: idx}
+		}]
+	}).then(function(user) {
+		yelp.business(idx, function(error, data) {
+		  res.render('pizza/show', {data: data, visited: user && user.pizzas.length});
+		});
+	})
 });
 
 module.exports = router;
