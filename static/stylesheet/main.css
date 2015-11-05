@@ -11,6 +11,7 @@ body {
 }
 
 h1, h2, h3 {
+	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
 }
 
@@ -22,6 +23,7 @@ li {
 	margin-top: 10px;
 }
 
+a,
 a:link,
 a:hover,
 a:active,
@@ -173,15 +175,6 @@ p {
 	height: 100%;
 }
 
-#map {
-	width: 500px;
-	height: 500px;
-}
-
-.pizza {
-	height: 100px;
-}
-
 .modal-header {
 	color: #000000;
 	border: none;
@@ -209,3 +202,25 @@ label {
 	border: none;
 }
 
+#map {
+	width: 500px;
+	height: 500px;
+}
+
+
+/* Pizza index */
+.index-row {
+	height: 600px;
+	background-color: #E74C3C;
+	text-align: center;
+}
+
+.index-row h3 {
+	margin: 30px 0 20px 0;
+}
+
+.pizza {
+	height: 180px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
