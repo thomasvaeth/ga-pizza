@@ -2,6 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="google" content="notranslate">
+		<meta http-equiv="Content-Language" content="en">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>You Are Pizza <%= titleVar %></title>
@@ -26,7 +28,7 @@
 						<li><a href="/">Home</a></li>
 						<% if (!currentUser) { %>
 							<li><a data-toggle="modal" href="#signup-modal">Sign Up</a></li>
-							<li><a href="/login">Log In</a></li>
+							<li><a data-toggle="modal" href="#signin-modal">Sign In</a></li>
 						<% } else { %>
 							<li><a href="/profile">Profile</a></li>
 							<li><a href="/logout">Logout</a></li>
@@ -46,6 +48,117 @@
 			<hr>
 
 		</div>
+
+		<!-- Start of signup modal -->
+		<div class="modal fade" id="signup-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3>LET'S BE A MEMBER</h3>
+					</div>
+
+					<hr>
+
+					<div class="modal-body">
+
+						<form action="/signup" method="POST" role="form">
+							<div class="row">
+								<div id="first-modal" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+									<div class="form-group">
+										<label for="first-name">Name</label>
+										<input type="text" class="form-control input-lg" name="firstName" placeholder="First" id="first-name" required>
+									</div>
+								</div>
+								<div id="last-modal" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+									<div class="form-group">
+										<label for="last-name">&nbsp;</label>
+										<input type="text" class="form-control input-lg" name="lastName" placeholder="Last" id="last-name" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+									<div class="form-group">
+										<label for="email">Email address</label>
+										<input type="email" class="form-control input-lg" name="email" placeholder="Email" id="email" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+									<div class="form-group">
+										<label for="password">Create a password</label>
+										<input type="password" class="form-control input-lg" name="password" placeholder="Password (8 character minimum)" minlength="8" maxlength="99" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+									<input type="password" class="form-control input-lg" name="passwordConfirm" placeholder="Confirm Password" minlength="8" maxlength="99" required>
+								</div>
+							</div>
+					</div>
+
+					<hr>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-lg btn-default" data-dismiss="modal">CANCEL</button>
+						<button type="submit" class="btn btn-lg btn-primary">SIGN UP</button>
+					</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- End of signup modal -->
+
+		<!-- Start of signin modal -->
+		<div class="modal fade" id="signin-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3>LET'S BE A MEMBER</h3>
+					</div>
+
+					<hr>
+
+					<div class="modal-body">
+
+						<form action="/signin" method="POST" role="form">
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+									<div class="form-group">
+										<label for="email">Email address</label>
+										<input type="email" class="form-control input-lg" name="email" placeholder="Email" id="email" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input type="password" class="form-control input-lg" name="password" placeholder="Password" minlength="8" maxlength="99" required>
+									</div>
+								</div>
+							</div>
+					</div>
+
+					<hr>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-lg btn-default" data-dismiss="modal">CANCEL</button>
+						<button type="submit" class="btn btn-lg btn-primary">SIGN IN</button>
+					</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- End of signin modal -->
+
+
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->

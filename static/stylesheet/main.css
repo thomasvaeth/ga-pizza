@@ -36,7 +36,7 @@ li a:visited {
 	font-family: 'Double Feature';
 	font-size: 18px;
 	letter-spacing: 1px;
-	color: #000000;
+	color: #4D4D4D;
 	background-color: #ECF0F1;
 	border: none;
 }
@@ -51,6 +51,12 @@ p {
 	font-size: 16px;
 }
 
+.form-control {
+	border: 1px solid #ECF0F1;
+}
+
+.modal-content,
+.input-lg,
 .btn-lg {
 	border-radius: 0;
 }

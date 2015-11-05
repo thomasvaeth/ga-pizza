@@ -37,7 +37,7 @@ router.post('/signup', function(req, res) {
 	}
 });
 
-router.post('/login', function(req, res) {
+router.post('/signin', function(req, res) {
 	db.user.find({
 		where: {
 			email: req.body.email
@@ -51,21 +51,21 @@ router.post('/login', function(req, res) {
 				if (result) {
 					req.session.user = user.id;
 					req.flash('success', 'Logged in.');
-					res.redirect('/');
+					res.redirect(req.get('referer'));
 				} else {
 					req.flash('danger', 'Incorrect email or password.');
-					res.redirect('/login');
+					res.redirect('/');
 				}
 			});
 		} else {
 			console.log('No email found.');
-			res.redirect('/signup');
+			res.redirect('/');
 		}
 	});
 });
 
-router.get('/login', function(req, res) {
-	res.render('user/login');
+router.get('/signin', function(req, res) {
+	res.render('/');
 });
 
 router.get('/logout', function(req, res) {
