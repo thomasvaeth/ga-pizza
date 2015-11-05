@@ -2,12 +2,19 @@
 	font-family: 'Double Feature'; src: url('/fonts/DoubleFeature.ttf');
 }
 
-.container {
-	max-width: 800px;
+html,
+body {
+	background-color: #ECF0F1;
+	color: white;
 }
 
-.alert {
-	margin: 0 auto;
+hr {
+	border-color: white;
+}
+
+.container {
+	max-width: 800px;
+	width: 100%;
 }
 
 a:link,
@@ -34,6 +41,7 @@ a:visited {
 .search-row {
 	height: 250px;
 	background-color: #E74C3C;
+	text-align: center;
 }
 
 .how-row {
@@ -45,7 +53,7 @@ a:visited {
 	background-color: #3498DB;
 }
 
-.media-row {
+.youtube-row {
 	height: 500px;
 	background-color: black;
 }
@@ -55,9 +63,22 @@ a:visited {
   margin-top: 55px;
 }
 
+.instagram-row {
+	height: 600px;
+	background-color: #E74C3C;
+}
+
+#instafeed {
+	padding-top: 35px;
+}
+
+#instafeed a img {
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
 .social-row {
 	height: 150px;
-	background-color: #E74C3C;
 }
 
 #map {

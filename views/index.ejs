@@ -6,10 +6,8 @@
 	</div>
 </div>
 
-<hr>
-
 <div class="row search-row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
 		<p>
 			<form action="/search" method="GET" role="search">
 				<input class="form-control input-lg" type="text" placeholder="Enter Address" name="address" autocomplete="off" required>
@@ -19,15 +17,13 @@
 		or
 		<p>
 			<form action="/search" method="GET" role="search">
-				<input name="latitude">
-				<input name="longitude">
+				<input type="hidden" name="latitude">
+				<input type="hidden" name="longitude">
 				<button class="btn btn-large btn-default" role="button" type="submit">Use Current Location</button>
 			</form>
 		</p>
 	</div>
 </div>
-
-<hr>
 
 <div class="row how-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -59,22 +55,23 @@
 	</div>
 </div>
 
-<hr>
-
 <div class="row signup-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	</div>
 </div>
 
-<hr>
-
-<div class="row media-row">
+<div class="row youtube-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<iframe width="640" height="390" src="https://www.youtube.com/embed/k6DA_WwO90c" frameborder="0" allowfullscreen class="music-video"></iframe>
 	</div>
 </div>
 
-<hr>
+<div class="row instagram-row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h2>LET'S LOOK AT PIZZA</h2>
+		<div id="instafeed"></div>
+	</div>
+</div>
 
 <div class="row social-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -82,3 +79,4 @@
 </div>
 
 <script type="text/javascript" src="/js/geolocation.js"></script>
+<script type="text/javascript" src="/js/instafeed.js"></script>
