@@ -27,10 +27,10 @@
 
 			<% if (currentUser && !visited) { %>
 				<button type="submit" class="btn btn-lg btn-default visited">ADD TO VISITED</button>
-			<% } else if (currentUser && visited) { %>
-				<button type="submit" class="btn btn-lg btn-default deleted">I DIDN'T GO</button>
-			<% } %>
 		</form>
+			<% } else if (currentUser && visited) { %>
+				<a href="/delete/<%= data.id %>" class="btn btn-lg btn-default deleted">I DIDN'T GO</a>
+			<% } %>
 
 		<a href="https://twitter.com/intent/tweet?button_hashtag=YouArePizza&text=I%20am%20going%20to%20eat%20pizza%20at%20<%=data.name%>.%20http%3A%2F%2Fgoo.gl%2F7QvwGE%20%F0%9F%8D%95%F0%9F%8D%95%F0%9F%8D%95"><button class="btn btn-lg btn-default" role="button" type="submit"><i class="fa fa-twitter"></i> TWEET #YouArePizza</button></a>
 

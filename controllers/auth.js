@@ -58,7 +58,6 @@ router.post('/signin', function(req, res) {
 				}
 			});
 		} else {
-			console.log('No email found.');
 			res.redirect(req.get('referer'));
 		}
 	});

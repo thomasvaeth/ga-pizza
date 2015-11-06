@@ -51,6 +51,17 @@ app.use('/search', require('./controllers/pizza-information'));
 
 app.use('/profile', require('./controllers/profile'));
 
+app.delete('/delete/:idx', function(req, res) {
+	var idx = req.params.idx;
+	db.pizza.find({where: {yelpId: idx}}).then(function(pepperoni) {
+		db.pizza.findById(pepperoni.id).then(function(cheese) {
+			cheese.removeUser(req.currentUser.id).then(function() {
+				res.send('Ajax');
+			});
+		});
+	});
+});
+
 app.listen(port , function() {
 	console.log('I just ate ' + port + ' slices of pizza.');
 });
