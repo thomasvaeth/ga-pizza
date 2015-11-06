@@ -215,6 +215,7 @@ label {
 
 .line-up {
 	padding: 0 10px;
+	max-height: 237px;
 }
 
 .pizza {
