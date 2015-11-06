@@ -2,4 +2,16 @@
 $(document).ready(function() {
 	// Alert fade out.
 	$('.alert').delay(2200).fadeOut(300);
+
+	// Ajax delete.
+	$('.deleted').click(function(e) {
+		e.preventDefault();
+		var url = $(this).attr('href');
+		$.ajax({
+			url: url,
+			method: 'DELETE'
+		}).done(function(data) {
+			window.location.reload();
+		});
+	});
 });

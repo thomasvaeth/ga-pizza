@@ -37,7 +37,7 @@ router.get('/', function(req, res) {
 	if (req.currentUser) {
 		db.user.findById(req.session.user).then(function(user) {
 			user.getPizzas().then(function(pizzas) {
-				res.render('user/profile', {user: user, pizzas: pizzas});
+				res.render('profile', {user: user, pizzas: pizzas});
 			});
 		});
 	} else {

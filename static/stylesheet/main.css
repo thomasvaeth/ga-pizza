@@ -210,6 +210,12 @@ label {
 	border: none;
 }
 
+/* Alerts */
+.alert {
+	border: none;
+	border-radius: 0;
+}
+
 /* Pizza index */
 .index-row {
 	height: 600px;
@@ -300,7 +306,6 @@ i {
 }
 
 /* Profile */
-
 .profile-row {
 	height: 600px;
 	background-color: #E74C3C;
