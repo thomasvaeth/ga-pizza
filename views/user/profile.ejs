@@ -2,6 +2,8 @@
 
 <h1><%= user.firstName + ' ' + user.lastName %>'s Profile</h1>
 
+<div id="profile-map" style="height: 500px; width: 500px;"></div>
+
 <% pizzas.forEach(function(pizza) { %>
 	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 		<a href="/search/<%= pizza.yelpId %>">
@@ -11,3 +13,7 @@
 		</a>
 	</div>
 <% }) %>
+
+<script>var pizzas = <%- JSON.stringify(pizzas) %></script>
+<script type="text/javascript" src="/js/profile-map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp-jDudRLSFGy_owucJ4ZO36CU1vVOk4I&callback=initMap"></script>
