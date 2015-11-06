@@ -5,10 +5,14 @@ function initMap() {
   });
 
 	pizzas.forEach(function(pizza) {
-		var market = new google.maps.Marker({
+		var marker = new google.maps.Marker({
 	  	position: {lat: parseFloat(pizza.latitude), lng: parseFloat(pizza.longitude)},
 	  	map: map,
-	  	title: pizza.name
+	  	title: pizza.name,
+	  	url: 'google.com'
 	  });
+		marker.addListener('click', function() {
+			window.location.href='/search/' +pizza.yelpId;
+		});
 	});
 }

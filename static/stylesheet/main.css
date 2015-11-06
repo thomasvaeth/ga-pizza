@@ -289,3 +289,29 @@ i {
    width: 100%;
    height: 500px;
 }
+
+/* Profile */
+
+.profile-row {
+	height: 600px;
+	background-color: #E74C3C;
+	text-align: center;
+}
+
+#profile-map {
+	width: 100%; 
+	height: 450px;
+}
+
+.profile-row .btn-default {
+	background-color: #3498DB;
+	border: none;
+	color: #FFFFFF;
+	margin-top: 20px;
+}
+
+.profile-row .btn-default:hover,
+.profile-row .btn-default:active {
+	background-color: #2980B9;
+}
+

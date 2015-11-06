@@ -1,19 +1,19 @@
-<% titleVar = "| Profile" %>
+<% titleVar = "| " + user.firstName + "'s' Profile" %>
 
-<h1><%= user.firstName + ' ' + user.lastName %>'s Profile</h1>
-
-<div id="profile-map" style="height: 500px; width: 500px;"></div>
-
-<% pizzas.forEach(function(pizza) { %>
-	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-		<a href="/search/<%= pizza.yelpId %>">
-			<div class="well">
-				<%= pizza.name %>
-			</div>
-		</a>
+<div class="row profile-row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<h3>LET'S SEE WHERE YOU ATE</h3>
 	</div>
-<% }) %>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div id="profile-map"></div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<a href="/search?latitude=<%= pizzas[pizzas.length - 1].latitude%>&longitude=<%= pizzas[pizzas.length - 1].longitude %>"><button class="btn btn-lg btn-default" role="button" type="submit">ONLY <%= pizzas.length %>. FIND MORE</button></a>
+	</div>
+</div>
 
 <script>var pizzas = <%- JSON.stringify(pizzas) %></script>
 <script type="text/javascript" src="/js/profile-map.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp-jDudRLSFGy_owucJ4ZO36CU1vVOk4I&callback=initMap"></script>
+
+parseFloat(pizzas[pizzas.length - 1].latitude), lng: parseFloat(pizzas[pizzas.length - 1].longitude
