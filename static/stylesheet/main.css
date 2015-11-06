@@ -107,13 +107,21 @@ p {
 }
 
 .how-row {
-	height: 500px;
+	height: 350px;
 	color: #4D4D4D;
 	text-align: center;
 }
 
 .how-row h3 {
 	margin: 30px 0 20px 0;
+}
+
+.thumbnail .caption {
+	color: #4D4D4D;
+}
+
+.how {
+	border-color: #ECF0F1;
 }
 
 .signup-row {
