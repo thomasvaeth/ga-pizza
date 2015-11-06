@@ -27,7 +27,7 @@ router.post('/', function(req, res) {
 			}
 		}).spread(function(pizza, created) {
 			user.addPizza(pizza).then(function() {
-				res.redirect('/profile');
+				res.redirect(req.get('referer'));
 			});
 		});
 	});
