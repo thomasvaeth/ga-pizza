@@ -197,6 +197,42 @@ label {
 	border: none;
 }
 
+.about-row a,
+.about-row a:link,
+.about-row a:hover,
+.about-row a:active,
+.about-row a:visited {
+	color: #4D4D4D;
+}
+
+.about-row i {
+	margin-right: 4px;
+}
+
+.about-center {
+	text-align: center;
+}
+
+.about-center p {
+	font-size: 14px;
+}
+
+.about-center a:hover {
+	text-decoration: underline;
+}
+
+#about-modal {
+	color: #4D4D4D;
+}
+
+.profile-pic {
+	margin-bottom: 15px;
+}
+
+.link-row {
+	margin-top: 20px;
+}
+
 /* Alerts */
 .alert {
 	border: none;
