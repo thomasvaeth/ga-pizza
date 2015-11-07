@@ -3,6 +3,14 @@ $(document).ready(function() {
 	// Alert fade out.
 	$('.alert').delay(2200).fadeOut(300);
 
+	// Modal autofocus.
+	$('#signup-modal').on('shown.bs.modal', function () {
+		$('#first-name').focus()
+	});
+	$('#signin-modal').on('shown.bs.modal', function () {
+  	$('.signin-email').focus()
+	});
+
 	// Ajax delete.
 	$('.deleted').click(function(e) {
 		e.preventDefault();

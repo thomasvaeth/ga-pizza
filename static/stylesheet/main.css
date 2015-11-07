@@ -35,7 +35,7 @@ li a:link,
 li a:hover,
 li a:active,
 li a:visited {
-	font-family: 'Double Feature';
+	font-family: 'Double Feature', 'Raleway', sans-serif;
 	font-size: 18px;
 	letter-spacing: 1px;
 	color: #4D4D4D;
@@ -78,6 +78,8 @@ p {
   margin: auto;
   right: 0;
   left: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .search-row {
@@ -141,22 +143,7 @@ p {
 }
 
 .instagram-row {
-	height: 715px;
-	background-color: #E74C3C;
-	text-align: center;
-}
-
-.instagram-row h3 {
-	margin: 30px 0 20px 0;
-}
-
-#instafeed {
-	padding-top: 5px;
-}
-
-#instafeed a img {
-	margin-right: 4px;
-	margin-bottom: 4px;
+	display: none;
 }
 
 .youtube-row {
@@ -327,4 +314,42 @@ i {
 .profile-row .btn-default:hover,
 .profile-row .btn-default:active {
 	background-color: #2980B9;
+}
+
+/* 404 */
+.catch-row {
+	height: 600px;
+	color: #4D4D4D;
+	text-align: center;
+}
+
+.main-error {
+	font-family: 'Double Feature', 'Raleway', sans-serif;
+	font-size: 400px;
+}
+
+.text-error {
+	font-size: 18px;
+}
+
+@media (min-width: 800px) {
+	.instagram-row {
+		display: block;
+		height: 715px;
+		background-color: #E74C3C;
+		text-align: center;
+	}
+
+	.instagram-row h3 {
+		margin: 30px 0 20px 0;
+	}
+
+	#instafeed {
+		padding-top: 5px;
+	}
+
+	#instafeed a img {
+		margin-right: 4px;
+		margin-bottom: 4px;
+	}
 }

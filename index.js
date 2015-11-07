@@ -62,6 +62,10 @@ app.delete('/delete/:idx', function(req, res) {
 	});
 });
 
+app.get('/*', function(req, res) {
+	res.render('404');
+});
+
 app.listen(port , function() {
 	console.log('I just ate ' + port + ' slices of pizza.');
 });
