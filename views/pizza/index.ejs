@@ -1,13 +1,20 @@
 <% titleVar = '| Search' %>
 <% var pizzaArr = ['pizza-01.png', 'pizza-02.png', 'pizza-03.png', 'pizza-04.png', 'pizza-05.png', 'pizza-06.png', 'pizza-07.png', 'pizza-08.png'] %>
 <% var number %>
+<% var max %>
 
 <div class="row index-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h3>LET'S PICK ONE</h3>
 	</div>
 
-	<% for (var i = 0; i < 8; i++) { %>
+	<% if (data.businesses.length < 8) { %>
+		<% max = data.businesses.length %>
+	<% } else { %>
+		<% max = 8 %>
+	<% } %>
+
+	<% for (var i = 0; i < max; i++) { %>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 line-up">
 			<a href="/search/<%= data.businesses[i].id %>">
 				<% number = Math.floor(Math.random() * 8); %>
