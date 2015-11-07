@@ -58,6 +58,7 @@ router.post('/signin', function(req, res) {
 				}
 			});
 		} else {
+			req.flash('danger', 'Incorrect email or password.');
 			res.redirect(req.get('referer'));
 		}
 	});

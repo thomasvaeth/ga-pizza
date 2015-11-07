@@ -8,10 +8,18 @@
 		<div id="profile-map"></div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<a href="/search?latitude=<%= pizzas[pizzas.length - 1].latitude%>&longitude=<%= pizzas[pizzas.length - 1].longitude %>"><button class="btn btn-lg btn-default" role="button" type="submit">ONLY <%= pizzas.length %>. FIND MORE</button></a>
+		<% if (returningUser) { %>
+			<a href="/search?latitude=<%= pizzas[pizzas.length - 1].latitude%>&longitude=<%= pizzas[pizzas.length - 1].longitude %>"><button class="btn btn-lg btn-default" role="button" type="submit">LET'S FIND MORE</button></a>
+		<% } else { %>
+			<a href="/#search"><button class="btn btn-lg btn-default" role="button" type="submit">LET'S FIND SOMEWHERE</button></a>
+		<% } %>
 	</div>
 </div>
 
-<script>var pizzas = <%- JSON.stringify(pizzas) %></script>
-<script type="text/javascript" src="/js/profile-map.js"></script>
+<% if (returningUser) { %>
+	<script>var pizzas = <%- JSON.stringify(pizzas) %></script>
+	<script type="text/javascript" src="/js/profile-map.js"></script>
+<% } else { %>
+	<script type="text/javascript" src="/js/empty-profile-map.js"></script>
+<% } %>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp-jDudRLSFGy_owucJ4ZO36CU1vVOk4I&callback=initMap"></script>

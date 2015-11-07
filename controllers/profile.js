@@ -33,11 +33,18 @@ router.post('/', function(req, res) {
 	});
 });
 
+var returningUser;
 router.get('/', function(req, res) {
+	returningUser = false;
 	if (req.currentUser) {
 		db.user.findById(req.session.user).then(function(user) {
 			user.getPizzas().then(function(pizzas) {
-				res.render('profile', {user: user, pizzas: pizzas});
+				if (pizzas.length > 0) {
+					returningUser = true;
+					res.render('profile', {user: user, returningUser: returningUser, pizzas: pizzas});
+				} else {
+					res.render('profile', {user: user, returningUser: returningUser});
+				}
 			});
 		});
 	} else {
