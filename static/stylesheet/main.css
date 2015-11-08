@@ -69,7 +69,7 @@ p {
 }
 
 .landing-row {
-	height: 600px;
+	height: 415px;
 	background-color: #3498DB;
 }
 
@@ -83,13 +83,15 @@ p {
 }
 
 .search-row {
-	height: 225px;
+	height: 275px;
 	background-color: #E74C3C;
 	text-align: center;
 }
 
-.form-inline {
+.search-row .form-inline {
 	margin-top: 15px;
+	display: inline-block;
+	width: auto;
 }
 
 .form-inline input {
@@ -109,7 +111,7 @@ p {
 }
 
 .how-row {
-	height: 350px;
+	height: 810px;
 	color: #4D4D4D;
 	text-align: center;
 }
@@ -147,7 +149,7 @@ p {
 }
 
 .youtube-row {
-	height: 535px;
+	height: auto;
 	background-color: #000000;
 	text-align: center;
 }
@@ -160,6 +162,7 @@ p {
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
+	margin-bottom: 15px;
 }
 
 .video-wrapper iframe {
@@ -368,7 +371,31 @@ i {
 	font-size: 18px;
 }
 
+/* iPhone 6 and 6 plus */
+@media (min-width: 375px) {
+	.landing-row {
+		height: 505px;
+	}
+
+	.how-row {
+		height: 720px;
+	}
+}
+
+/* Tablets and computer */
 @media (min-width: 800px) {
+	.landing-row {
+		height: 600px;
+	}
+
+	.search-row {
+		height: 225px;
+	}
+
+	.how-row {
+		height: 350px;
+	}
+
 	.instagram-row {
 		display: block;
 		height: 715px;
@@ -387,5 +414,13 @@ i {
 	#instafeed a img {
 		margin-right: 4px;
 		margin-bottom: 4px;
+	}
+
+	.youtube-row {
+		height: 535px;
+	}
+
+	.video-wrapper {
+		margin-bottom: 0;
 	}
 }
