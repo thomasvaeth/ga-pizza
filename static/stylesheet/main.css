@@ -372,14 +372,14 @@ i {
 
 /* 404 */
 .catch-row {
-	height: 600px;
+	height: 395px;
 	color: #4D4D4D;
 	text-align: center;
 }
 
 .main-error {
 	font-family: 'Double Feature', 'Raleway', sans-serif;
-	font-size: 400px;
+	font-size: 160px;
 }
 
 .text-error {
@@ -400,6 +400,22 @@ i {
 	.show-row {
 		height: 965px;
 	}
+
+	/* 404 */
+	.catch-row {
+		height: 455px;
+	}
+
+	.main-error {
+		font-size: 180px;
+	}
+}
+
+@media (min-width: 414px) {
+	/* 404 */
+	.catch-row {
+		height: 555px;
+	}
 }
 
 /* iPhone 5 landscape */
@@ -416,6 +432,15 @@ i {
 	.show-row {
 		height: 920px;
 	}
+
+	/* 404 */
+	.catch-row {
+		height: 370px;
+	}
+
+	.main-error {
+		font-size: 200px;
+	}
 }
 
 /* iPhone 6 and 6 plus landscape */
@@ -431,6 +456,15 @@ i {
 	/* Pizza show */
 	.show-row {
 		height: 900px;
+	}
+
+	/* 404 */
+	.catch-row {
+		height: 555px;
+	}
+
+	.main-error {
+		font-size: 325px;
 	}
 }
 
@@ -488,5 +522,14 @@ i {
 
 	#pizzeria {
 		display: block;
+	}
+
+	/* 404 */
+	.catch-row {
+		height: 600px;
+	}
+
+	.main-error {
+		font-size: 400px;
 	}
 }
