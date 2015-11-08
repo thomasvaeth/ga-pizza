@@ -386,7 +386,7 @@ i {
 	font-size: 18px;
 }
 
-/* iPhone 6 and 6 plus */
+/* iPhone 6 and 6 plus portrait */
 @media (min-width: 375px) {
 	.landing-row {
 		height: 505px;
@@ -399,6 +399,38 @@ i {
 	/* Pizza show */
 	.show-row {
 		height: 965px;
+	}
+}
+
+/* iPhone 5 landscape */
+@media (min-width: 568px) {
+	.landing-row {
+		height: 570px;
+	}
+
+	.how-row {
+		height: 655px;
+	}
+
+	/* Pizza show */
+	.show-row {
+		height: 920px;
+	}
+}
+
+/* iPhone 6 and 6 plus landscape */
+@media (min-width: 667px) {
+	.landing-row {
+		height: 555px;
+	}
+
+	.how-row {
+		height: 600px;
+	}
+
+	/* Pizza show */
+	.show-row {
+		height: 900px;
 	}
 }
 
