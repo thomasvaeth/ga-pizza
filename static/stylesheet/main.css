@@ -68,6 +68,16 @@ p {
 	width: 100%;
 }
 
+.navbar-toggle {
+	border-radius: 0;
+	border-color: #4D4D4D;
+	margin-top: 15px;
+}
+
+.icon-bar {
+	background-color: #4D4D4D;
+}
+
 .landing-row {
 	height: 415px;
 	background-color: #3498DB;
