@@ -244,7 +244,7 @@ label {
 
 /* Pizza index */
 .index-row {
-	height: 600px;
+	height: 2000px;
 	background-color: #E74C3C;
 	text-align: center;
 }
@@ -269,7 +269,7 @@ label {
 
 /* Pizza show */
 .show-row {
-	height: 600px;
+	height: 1010px;
 	background-color: #3498DB;
 	text-align: center;
 }
@@ -279,11 +279,16 @@ label {
 }
 
 #pizzeria {
+	display: none;
 	margin-top: 10px;
 }
 
 .show-row-header {
 	text-transform: uppercase;
+}
+
+#map {
+	margin-top: 10px;
 }
 
 blockquote {
@@ -380,6 +385,11 @@ i {
 	.how-row {
 		height: 720px;
 	}
+
+	/* Pizza show */
+	.show-row {
+		height: 965px;
+	}
 }
 
 /* Tablets and computer */
@@ -422,5 +432,19 @@ i {
 
 	.video-wrapper {
 		margin-bottom: 0;
+	}
+
+	/* Pizza index */
+	.index-row {
+		height: 600px;
+	}
+
+	/* Pizza show */
+	.show-row {
+		height: 600px;
+	}
+
+	#pizzeria {
+		display: block;
 	}
 }
