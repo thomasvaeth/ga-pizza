@@ -1,8 +1,12 @@
+var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var isDraggable = width > 800 ? true : false;
+
 function initMap() {
   var map = new google.maps.Map(document.getElementById('profile-map'), {
     center: {lat: parseFloat(pizzas[pizzas.length - 1].latitude), lng: parseFloat(pizzas[pizzas.length - 1].longitude)},
     zoom: 13,
-    scrollwheel: false
+    scrollwheel: false,
+    draggable: isDraggable
   });
 
 	pizzas.forEach(function(pizza) {
