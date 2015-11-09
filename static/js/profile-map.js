@@ -1,7 +1,8 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('profile-map'), {
     center: {lat: parseFloat(pizzas[pizzas.length - 1].latitude), lng: parseFloat(pizzas[pizzas.length - 1].longitude)},
-    zoom: 13
+    zoom: 13,
+    scrollwheel: false
   });
 
 	pizzas.forEach(function(pizza) {

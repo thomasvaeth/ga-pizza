@@ -5,7 +5,8 @@ var longitude = parseFloat(document.getElementsByTagName('input')[5].value);
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: latitude, lng: longitude},
-    zoom: 18
+    zoom: 18,
+    scrollwheel: false
   });
 
   var market = new google.maps.Marker({
