@@ -1,4 +1,4 @@
-# You Are Pizza
+# [You Are Pizza](http://www.youarepizza.com/)
 ### About
 You Are Pizza is not about finding pizzerias, but about keeping track of all the pizza you have tried. I got the idea from a phrase about you are what you eat and I like to eat pizza. I was also lucky enough for [Gustavo Zambelli](https://dribbble.com/zamax) to provide all the pizza images for the project.
 
@@ -26,3 +26,11 @@ I wanted to make sure the user had several options besides the HTML5 geolocation
 * Mark current location to Google Maps, so I could use the Directions Service.
 * Add 404 page.
 * Add favorite section in addition to all places visited.
+
+### Screenshots
+Landing View
+![Landing](https://github.com/thomasvaeth/ga-pizza/blob/master/screenshots/screenshot-1.png "Desktop screenshot")
+Details View
+![Quote](https://github.com/thomasvaeth/ga-pizza/blob/master/screenshots/screenshot-2.png "Desktop screenshot")
+Profile View
+![About](https://github.com/thomasvaeth/ga-pizza/blob/master/screenshots/screenshot-3.png "Desktop screenshot")
