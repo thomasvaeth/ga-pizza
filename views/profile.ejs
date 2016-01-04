@@ -2,16 +2,16 @@
 
 <div class="row profile-row">
 	<div class="col-xs-12">
-		<h3>LET'S SEE WHERE YOU ATE</h3>
+		<h3 class="text-transform">Let's See Where You Ate</h3>
 	</div>
 	<div class="col-xs-12">
 		<div id="profile-map"></div>
 	</div>
 	<div class="col-xs-12">
 		<% if (returningUser) { %>
-			<a href="/search?latitude=<%= pizzas[pizzas.length - 1].latitude%>&longitude=<%= pizzas[pizzas.length - 1].longitude %>"><button class="btn btn-lg btn-default" role="button" type="submit">LET'S FIND MORE</button></a>
+			<a href="/search?latitude=<%= pizzas[pizzas.length - 1].latitude%>&longitude=<%= pizzas[pizzas.length - 1].longitude %>"><button class="btn btn-lg btn-default text-transform" role="button" type="submit">Let's Find More</button></a>
 		<% } else { %>
-			<a href="/#search"><button class="btn btn-lg btn-default" role="button" type="submit">LET'S FIND SOMEWHERE</button></a>
+			<a href="/#search"><button class="btn btn-lg btn-default text-transform" role="button" type="submit">Let's Find Somewhere</button></a>
 		<% } %>
 	</div>
 </div>
